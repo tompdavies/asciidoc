@@ -1,0 +1,163 @@
+= README
+:sectanchors:
+:sectlinks:
+:sectnums:
+:icons: font
+
+== Introduction
+
+This project is intended to provide a standardised approach to creating simple html pages and pdf files from AsciiDoc files.
+
+Also, creation of DocBook (xml) files and other output from the DocBook toolchain, such as chunked html pages.
+
+== Installation
+
+=== Installing AsciiDoc on Centos
+
+ $ sudo yum install asciidoc
+ $ sudo yum install asciidoctor
+ $ sudo yum install xmlto
+
+=== Installing AsciiDoc on Ubuntu
+
+ $ sudo apt-get install asciidoc
+ $ sudo apt-get install asciidoctor
+ $ sudo apt-get install xmlto
+
+=== Upgrade Ruby
+
+Check the version of Ruby:
+
+ $ ruby --version
+
+Check the pre-requisites for asciidoctor-pdf here: https://asciidoctor.org/docs/asciidoctor-pdf/#prerequisites.
+
+To upgrade to a newer version of Ruby, follow the notes in <<Upgrading Ruby and RVM>>.
+
+=== Install Ruby Gems
+
+Install the Ruby Gems for asciidoctor, asciidoctor-pdf and the supporting gems for creating pdf files:
+
+ $ gem install asciidoctor
+ $ gem install prawn
+ $ gem install prawn-svg
+ $ gem install prawn-templates
+ $ gem install asciidoctor-pdf --pre
+
+Check the version of asciidoctor-pdf to prove the installation:
+
+ $ asciidoctor-pdf -v
+
+NOTE: See <<Managing Ruby Gems>> for notes on how to list and/or remove Ruby Gems.
+
+== Configuring AsciiDoc
+
+Create an asciidoc directory, e.g. /home/user/asciidoc.
+
+Create the following subfolders and contents (which can be pulled/downloaded from this Git project):
+
+* fonts
+* gen_html
+* gen_pdf
+
+For notes on the how the directory contents were created/defined/sourced, see <<Supporting Files>>.
+
+== Usage
+
+=== Creating HTML files
+
+Convert asciidoc to HTML5 with TOC on LHS:
+
+ $ asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css -a toc source_file.txt
+
+NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<head>` tag; 
+`toc` is an index at the top of the page; 
+`toc2` is a left hand side index.
+
+=== Creating PDF files
+
+Convert asciidoc to pdf:
+
+ $ asciidoctor-pdf -a pdf-style=/home/user/asciidoc/gen_pdf/pdf_theme_croscore.yml -a pdf-fontsdir=/home/user/asciidoc/fonts -a toc source_file.txt
+
+=== Creating DocBook files
+
+Convert asciidoc to docbook:
+
+ $ asciidoctor -b docbook source_file.xml
+
+=== Creating "chunked" HTML files
+
+Convert docbook to html pages, "chunking" on Heading 2:
+
+ $ xmlto --skip-validation --stringparam chunk.section.depth=2 xhtml -o www source_file.xml
+
+NOTE: `--skip-validation` avoids errors due to deprecated stylesheets.
+
+=== Simplifying Usage
+
+To simplify usage, create aliases in your local shell (or .bashrc) for example:
+
+ $ alias asciidoctor='asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css'
+ $ alias asciidoctor-pdf='asciidoctor-pdf -a pdf-style=/home/user/asciidoc/gen_pdf/pdf_theme_croscore.yml -a pdf-fontsdir=/home/user/asciidoc/fonts'
+
+To use the aliases:
+
+ $ asciidoctor -a toc source_file.txt
+ $ asciidoctor-pdf -a toc source_file.txt
+
+Remember that aliases can be overridden with a leading backslash in order to call the executable directly, for example:
+
+ $ \asciidoctor -b docbook source_file.txt
+
+You could also create shell scripts to combine generation of multiple output files based on a single file name as an argument.
+
+<<<
+
+== Appendices
+
+[appendix]
+=== Upgrading Ruby and RVM
+
+If an upgrade to a newer version of Ruby is required, (install and) use RVM.
+
+Ref:
+
+* https://tecadmin.net/install-ruby-latest-stable-centos/
+* http://rvm.io
+* https://asciidoctor.org/docs/asciidoctor-pdf/#prerequisites
+
+ $ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+ $ curl -sSL get.rvm.io | bash -s stable
+ $ source /home/user/.rvm/scripts/rvm
+ $ rvm reload
+ $ rvm requirements run
+ $ rvm install 2.5.1
+ $ rvm list
+ $ rvm use 2.5.1 --default
+ $ ruby --version
+
+[appendix]
+=== Managing Ruby Gems
+
+To list and/or remove Ruby Gems:
+
+ $ gem list
+ $ gem uninstall ...
+
+[appendix]
+=== Supporting Files
+
+Ref:
+
+* https://asciidoctor.org/docs/asciidoctor-pdf/
+* https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc
+
+Notes:
+
+* create docinfo.html with link tags or similar for the html header
+* create a local css stylesheet, based on one of the asciidoctor default stylesheets located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-1.5.6.2/data/stylesheets/` or similar.
+* create a local pdf yaml stylesheet, based on one of the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/themes/` or similar.
+* create a fonts directory, based on the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/fonts/` or similar.
+  You can add any additional .ttf font that you want to include in pdf documents.
+

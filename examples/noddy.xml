@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Noddy AsciiDoc Document</title>
+<date>2018-04-23</date>
+<author>
+<personname>
+<firstname>Tom</firstname>
+<surname>Davies</surname>
+</personname>
+<email>tom.davies@nhs.net</email>
+</author>
+<authorinitials>TD</authorinitials>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>This document is an introduction to AsciiDoc and some of the basic
+formatting options.</simpara>
+</section>
+<section xml:id="_heading_1">
+<title>Heading 1</title>
+<section xml:id="_heading_2">
+<title>Heading 2</title>
+<section xml:id="_heading_3">
+<title>Heading 3</title>
+<section xml:id="_heading_4">
+<title>Heading 4</title>
+<simpara>Here is some text.</simpara>
+<note>
+<simpara>Headings can be automatically numbered with by adding the <literal>:sectnums:</literal> attribute to the document header.
+However, autonumbering of headings don&#8217;t appear to carry through to docbook output and downstream files, e.g. chunked xhtml.
+Automatic links and anchors can be enabled with the <literal>:sectlinks:</literal> and <literal>:sectanchors:</literal> attributes.</simpara>
+</note>
+</section>
+</section>
+</section>
+</section>
+<section xml:id="_text_formatting">
+<title>Text formatting</title>
+<section xml:id="_paragraphs_and_line_breaks">
+<title>Paragraphs and line breaks</title>
+<simpara>Paragraphs don&#8217;t require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.</simpara>
+<simpara>To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.</simpara>
+<simpara>Manual line breaks<?asciidoc-br?>
+can be forced with a "plus" sign<?asciidoc-br?>
+at the end of a line.</simpara>
+<simpara>Or use <literal>[%hardbreaks]</literal> at the<?asciidoc-br?>
+start of a paragraph in<?asciidoc-br?>
+order to force line breaks.</simpara>
+<simpara>The following
+paragraph will
+return to normal
+line breaks.</simpara>
+<note>
+<simpara>Line breaks don&#8217;t appear to carry through to docbook output and downstream files, e.g. chunked xhtml.</simpara>
+</note>
+<simpara>You can also insert horizontal rules. There should be one between here&#8230;&#8203;</simpara>
+<simpara><?asciidoc-hr?></simpara>
+<simpara>... and here.</simpara>
+<note>
+<simpara>Horizontal rules don&#8217;t appear to carry through to docbook output and downstream files, e.g. chunked xhtml.</simpara>
+</note>
+<simpara>Now let&#8217;s try a page break (only for pdf output).</simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</section>
+<section xml:id="_bold_italics_and_monospace">
+<title>Bold, italics and monospace</title>
+<simpara>You can make <emphasis role="strong">words</emphasis> or whole lines <emphasis role="strong">bold</emphasis> by enclosing with an asterisk.</simpara>
+<simpara>Use <emphasis>underscores</emphasis> for <emphasis>italics</emphasis>.</simpara>
+<simpara>And <literal>monospace text</literal> can be forced with <literal>backticks</literal>.</simpara>
+<simpara>The above can be <emphasis role="strong"><emphasis>combined</emphasis></emphasis>.</simpara>
+</section>
+<section xml:id="_code_blocks">
+<title>Code blocks</title>
+<simpara>Prefixing lines/blocks with a single space will result in literal sections:</simpara>
+<literallayout class="monospaced">echo "This is a test"</literallayout>
+<simpara>This is useful for defining code/output blocks:</simpara>
+<literallayout class="monospaced">$ ls -ld .bash*
+-rw-------. 1 toda1 toda1 23576 Apr 19 16:29 .bash_history
+-rw-r--r--. 1 toda1 toda1    18 Aug  2  2016 .bash_logout
+-rw-r--r--. 1 toda1 toda1   745 Apr 17 10:29 .bash_profile
+-rw-r--r--. 1 toda1 toda1   814 Apr 19 09:21 .bashrc
+$</literallayout>
+<simpara>Or you can specify a delimited block with four repeated hyphens or periods enclosing the the block.</simpara>
+<screen>if [ "$playlist" = "Wittertainment" ]
+then
+  echo "Hello to Jason Isaacs"
+fi</screen>
+</section>
+</section>
+<section xml:id="_lists">
+<title>Lists</title>
+<section xml:id="_unordered_lists">
+<title>Unordered lists</title>
+<itemizedlist>
+<listitem>
+<simpara>one</simpara>
+</listitem>
+<listitem>
+<simpara>two</simpara>
+<itemizedlist>
+<listitem>
+<simpara>two-sub</simpara>
+<itemizedlist>
+<listitem>
+<simpara>two-sub-sub</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>three</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_ordered_lists">
+<title>Ordered lists</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>one</simpara>
+</listitem>
+<listitem>
+<simpara>two</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>two-sub</simpara>
+<orderedlist numeration="lowerroman">
+<listitem>
+<simpara>two-sub-sub</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>three</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_labelled_lists">
+<title>Labelled lists</title>
+<variablelist>
+<varlistentry>
+<term>Label 1</term>
+<listitem>
+<simpara>Definition 1</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Label 2</term>
+<listitem>
+<simpara>Definition 2</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Label 3</term>
+<listitem>
+<simpara>Definition 3</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+</section>
+</section>
+<section xml:id="_admonitions">
+<title>Admonitions</title>
+<simpara>Admonitions are special blocks of text:</simpara>
+<note>
+<simpara>This is a note.</simpara>
+</note>
+<simpara>Here&#8217;s another one:</simpara>
+<tip>
+<simpara>This is a tip.</simpara>
+</tip>
+<simpara>And another one:</simpara>
+<important>
+<simpara>This is important.</simpara>
+</important>
+<simpara>And another one:</simpara>
+<warning>
+<simpara>This is a warning.</simpara>
+</warning>
+<simpara>And another one:</simpara>
+<caution>
+<simpara>You should be careful.</simpara>
+</caution>
+<simpara>To enable icons in admonitions, set <literal>:icons: font</literal> in the document header.
+This will enable "Font Awesome".
+For more details, see <link xl:href="https://asciidoctor.org/docs/user-manual/#admonition-icons">https://asciidoctor.org/docs/user-manual/#admonition-icons</link>.</simpara>
+</section>
+<section xml:id="_links">
+<title>Links</title>
+<simpara>A simple link: <link xl:href="https://asciidoctor.org/docs/user-manual/">https://asciidoctor.org/docs/user-manual/</link></simpara>
+<simpara>A labelled link: <link xl:href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc syntax quick reference</link></simpara>
+<simpara>A link to an internal "anchor", in this case a header: <xref linkend="_links"/></simpara>
+</section>
+<section xml:id="_tables">
+<title>Tables</title>
+<table frame="all" rowsep="1" colsep="1">
+<title>Table of stuff</title>
+<tgroup cols="4">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="25*"/>
+<colspec colname="col_3" colwidth="25*"/>
+<colspec colname="col_4" colwidth="25*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Number</entry>
+<entry align="left" valign="top">English</entry>
+<entry align="left" valign="top">French</entry>
+<entry align="left" valign="top">German</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>1</simpara></entry>
+<entry align="left" valign="top"><simpara>One</simpara></entry>
+<entry align="left" valign="top"><simpara>Un</simpara></entry>
+<entry align="left" valign="top"><simpara>Ein</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>2</simpara></entry>
+<entry align="left" valign="top"><simpara>Two</simpara></entry>
+<entry align="left" valign="top"><simpara>Deux</simpara></entry>
+<entry align="left" valign="top"><simpara>Zwei</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>3</simpara></entry>
+<entry align="left" valign="top"><simpara>Three</simpara></entry>
+<entry align="left" valign="top"><simpara>Trois</simpara></entry>
+<entry align="left" valign="top"><simpara>Drei</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+</article>

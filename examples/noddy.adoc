@@ -1,0 +1,178 @@
+= Noddy AsciiDoc Document
+Tom Davies <tom.davies@nhs.net>
+v1.0 - 21/04/2018
+:sectanchors:
+:sectlinks:
+:sectnums:
+:icons: font
+
+== Introduction
+
+This document is an introduction to AsciiDoc and some of the basic
+formatting options.
+
+== Heading 1
+
+=== Heading 2
+
+==== Heading 3
+
+===== Heading 4
+
+Here is some text.
+
+NOTE: Headings can be automatically numbered with by adding the `:sectnums:` attribute to the document header.
+However, autonumbering of headings don't appear to carry through to docbook output and downstream files, e.g. chunked xhtml.
+Automatic links and anchors can be enabled with the `:sectlinks:` and `:sectanchors:` attributes.
+
+== Text formatting
+
+=== Paragraphs and line breaks
+
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.
+
+Manual line breaks +
+can be forced with a "plus" sign +
+at the end of a line.
+
+[%hardbreaks]
+Or use `[%hardbreaks]` at the
+start of a paragraph in
+order to force line breaks.
+
+The following 
+paragraph will 
+return to normal 
+line breaks.
+
+NOTE: Line breaks don't appear to carry through to docbook output and downstream files, e.g. chunked xhtml.
+
+You can also insert horizontal rules. There should be one between here...
+
+'''
+
+\... and here.
+
+// NB: the backslash in the line above is an example of escaping a special character.
+
+NOTE: Horizontal rules don't appear to carry through to docbook output and downstream files, e.g. chunked xhtml.
+
+Now let's try a page break (only for pdf output).
+
+<<<
+
+=== Bold, italics and monospace
+
+You can make *words* or whole lines *bold* by enclosing with an asterisk.
+
+Use _underscores_ for _italics_.
+
+And `monospace text` can be forced with `backticks`.
+
+The above can be *_combined_*.
+
+=== Code blocks
+
+Prefixing lines/blocks with a single space will result in literal sections:
+
+ echo "This is a test"
+
+This is useful for defining code/output blocks:
+
+ $ ls -ld .bash*
+ -rw-------. 1 toda1 toda1 23576 Apr 19 16:29 .bash_history
+ -rw-r--r--. 1 toda1 toda1    18 Aug  2  2016 .bash_logout
+ -rw-r--r--. 1 toda1 toda1   745 Apr 17 10:29 .bash_profile
+ -rw-r--r--. 1 toda1 toda1   814 Apr 19 09:21 .bashrc
+ $
+
+Or you can specify a delimited block with four repeated hyphens or periods enclosing the the block.
+
+----
+if [ "$playlist" = "Wittertainment" ]
+then
+  echo "Hello to Jason Isaacs"
+fi
+----
+
+== Lists
+
+=== Unordered lists
+
+* one
+* two
+** two-sub
+*** two-sub-sub
+* three
+
+=== Ordered lists
+
+. one
+. two
+.. two-sub
+... two-sub-sub
+. three
+
+=== Labelled lists
+
+Label 1::
+Definition 1
+Label 2::
+Definition 2
+Label 3::
+Definition 3
+
+== Admonitions
+
+Admonitions are special blocks of text:
+
+NOTE: This is a note.
+
+Here's another one:
+
+TIP: This is a tip.
+
+And another one:
+
+IMPORTANT: This is important.
+
+And another one:
+
+WARNING: This is a warning.
+
+And another one:
+
+CAUTION: You should be careful.
+
+To enable icons in admonitions, set `:icons: font` in the document header. 
+This will enable "Font Awesome".
+For more details, see https://asciidoctor.org/docs/user-manual/#admonition-icons.
+
+== Links
+
+A simple link: https://asciidoctor.org/docs/user-manual/
+
+A labelled link: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc syntax quick reference]
+
+A link to an internal "anchor", in this case a header: <<Links>>
+
+== Tables
+
+.Table of stuff
+|===
+|Number |English |French |German
+
+|1      |One     |Un     | Ein
+
+|2 |Two |Deux |Zwei
+
+|3
+|Three
+|Trois
+|Drei
+
+|===

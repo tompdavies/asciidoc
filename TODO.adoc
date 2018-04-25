@@ -1,0 +1,29 @@
+= AsciiDoc To Do List
+
+== Formatting
+
+* use comment lines, e.g.
+// -----------------------------------------------------------------------------
+* spacing before and after headings
+
+== Document Types
+
+* Article or Book - using multiple level 0 headings
+
+== DocBook
+
+* aliases for:
+** asciidoc to DocBook
+** DocBook to chunked html
+
+== Usage
+
+* shell script to:
+** create html from adoc
+** create pdf from adoc
+** create docbook (xml) from adoc
+** create chunked html from docbook (xml)
+
+== AsciiDoctor-PDF
+
+* Use "keep-together" in asciidoctor-pdf to prevent page break across a section?
