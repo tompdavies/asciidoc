@@ -176,3 +176,12 @@ A link to an internal "anchor", in this case a header: <<Links>>
 |Drei
 
 |===
+
+<<<
+
+== Appendices
+
+[appendix]
+=== Notes on creating appendices
+
+Appendices can be automatigally created by adding `[appendix]` on the line preceding a heading.
