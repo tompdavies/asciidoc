@@ -166,14 +166,14 @@ A link to an internal "anchor", in this case a header: <<Links>>
 |===
 |Number |English |French |German
 
-|1      |One     |Un     | Ein
+|1      |one     |un     | eins
 
-|2 |Two |Deux |Zwei
+|2 |two |deux |zwei
 
 |3
-|Three
-|Trois
-|Drei
+|three
+|trois
+|drei
 
 |===
 

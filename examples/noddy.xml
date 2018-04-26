@@ -218,21 +218,21 @@ For more details, see <link xl:href="https://asciidoctor.org/docs/user-manual/#a
 <tbody>
 <row>
 <entry align="left" valign="top"><simpara>1</simpara></entry>
-<entry align="left" valign="top"><simpara>One</simpara></entry>
-<entry align="left" valign="top"><simpara>Un</simpara></entry>
-<entry align="left" valign="top"><simpara>Ein</simpara></entry>
+<entry align="left" valign="top"><simpara>one</simpara></entry>
+<entry align="left" valign="top"><simpara>un</simpara></entry>
+<entry align="left" valign="top"><simpara>eins</simpara></entry>
 </row>
 <row>
 <entry align="left" valign="top"><simpara>2</simpara></entry>
-<entry align="left" valign="top"><simpara>Two</simpara></entry>
-<entry align="left" valign="top"><simpara>Deux</simpara></entry>
-<entry align="left" valign="top"><simpara>Zwei</simpara></entry>
+<entry align="left" valign="top"><simpara>two</simpara></entry>
+<entry align="left" valign="top"><simpara>deux</simpara></entry>
+<entry align="left" valign="top"><simpara>zwei</simpara></entry>
 </row>
 <row>
 <entry align="left" valign="top"><simpara>3</simpara></entry>
-<entry align="left" valign="top"><simpara>Three</simpara></entry>
-<entry align="left" valign="top"><simpara>Trois</simpara></entry>
-<entry align="left" valign="top"><simpara>Drei</simpara></entry>
+<entry align="left" valign="top"><simpara>three</simpara></entry>
+<entry align="left" valign="top"><simpara>trois</simpara></entry>
+<entry align="left" valign="top"><simpara>drei</simpara></entry>
 </row>
 </tbody>
 </tgroup>
