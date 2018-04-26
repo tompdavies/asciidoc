@@ -4,7 +4,7 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Noddy AsciiDoc Document</title>
-<date>2018-04-23</date>
+<date>2018-04-26</date>
 <author>
 <personname>
 <firstname>Tom</firstname>
@@ -170,23 +170,23 @@ fi</screen>
 <title>Admonitions</title>
 <simpara>Admonitions are special blocks of text:</simpara>
 <note>
-<simpara>This is a note.</simpara>
+<simpara>This is a NOTE style admonition.</simpara>
 </note>
 <simpara>Here&#8217;s another one:</simpara>
 <tip>
-<simpara>This is a tip.</simpara>
+<simpara>This is a TIP style admonition.</simpara>
 </tip>
 <simpara>And another one:</simpara>
-<important>
-<simpara>This is important.</simpara>
-</important>
-<simpara>And another one:</simpara>
 <warning>
-<simpara>This is a warning.</simpara>
+<simpara>This is a WARNING style admonition.</simpara>
 </warning>
 <simpara>And another one:</simpara>
+<important>
+<simpara>This is an IMPORTANT style admonition.</simpara>
+</important>
+<simpara>And another one:</simpara>
 <caution>
-<simpara>You should be careful.</simpara>
+<simpara>This is a CAUTION style admonition.</simpara>
 </caution>
 <simpara>To enable icons in admonitions, set <literal>:icons: font</literal> in the document header.
 This will enable "Font Awesome".
