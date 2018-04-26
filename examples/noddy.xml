@@ -243,7 +243,7 @@ For more details, see <link xl:href="https://asciidoctor.org/docs/user-manual/#a
 <title>Appendices</title>
 <appendix xml:id="_notes_on_creating_appendices">
 <title>Notes on creating appendices</title>
-<simpara>Appendices can be automatigally created by adding <literal>[appendix]</literal> on the line preceding a heading.</simpara>
+<simpara>Appendices can be automagically created by adding <literal>[appendix]</literal> on the line preceding a heading.</simpara>
 </appendix>
 </section>
 </article>
