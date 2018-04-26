@@ -130,23 +130,23 @@ Definition 3
 
 Admonitions are special blocks of text:
 
-NOTE: This is a note.
+NOTE: This is a NOTE style admonition.
 
 Here's another one:
 
-TIP: This is a tip.
+TIP: This is a TIP style admonition.
 
 And another one:
 
-IMPORTANT: This is important.
+WARNING: This is a WARNING style admonition.
 
 And another one:
 
-WARNING: This is a warning.
+IMPORTANT: This is an IMPORTANT style admonition.
 
 And another one:
 
-CAUTION: You should be careful.
+CAUTION: This is a CAUTION style admonition.
 
 To enable icons in admonitions, set `:icons: font` in the document header. 
 This will enable "Font Awesome".
