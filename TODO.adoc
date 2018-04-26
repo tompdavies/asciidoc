@@ -3,6 +3,7 @@
 == Formatting
 
 * spacing before and after headings
+* timezones
 * use comment lines, e.g.
 // -----------------------------------------------------------------------------
 
