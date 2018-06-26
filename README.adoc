@@ -70,9 +70,9 @@ Convert asciidoc to HTML5 with TOC on LHS:
 
  $ asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css -a toc source_file.txt
 
-NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<head>` tag; 
-`toc` is an index at the top of the page; 
-`toc2` is a left hand side index.
+NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<head>` tag +
+`toc` is an index at the top of the page +
+`toc2` is a left hand side index
 
 === Creating PDF files
 
