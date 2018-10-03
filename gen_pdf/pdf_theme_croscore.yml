@@ -114,7 +114,7 @@ heading:
   #line_height: 1.4
   # correct line height for Noto Serif metrics (comes with built-in line height)
   line_height: 1
-  margin_top: $vertical_rhythm * 0.4
+  margin_top: $vertical_rhythm * 1.2
   margin_bottom: $vertical_rhythm * 0.9
 title_page:
   align: right
