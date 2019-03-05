@@ -50,7 +50,7 @@ page:
   margin_outer: 0.59in
   size: A4
 base:
-  align: justify
+  align: left
   # color as hex string (leading # is optional)
   font_color: 333333
   # color as RGB array
@@ -104,10 +104,11 @@ heading:
   font_family: Open Sans
   font_style: bold
   # h1 is used for part titles (book doctype only)
-  h1_font_size: floor($base_font_size * 2.6)
+  h1_font_size: floor($base_font_size * 2.0)
   # h2 is used for chapter titles (book doctype only)
-  h2_font_size: floor($base_font_size * 2.15)
-  h3_font_size: round($base_font_size * 1.7)
+  h2_font_size: floor($base_font_size * 1.8)
+  h3_font_size: round($base_font_size * 1.6)
+  h3_font_style: bold_italic
   h4_font_size: $base_font_size_large
   h5_font_size: $base_font_size
   h6_font_size: $base_font_size_small
