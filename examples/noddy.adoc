@@ -1,6 +1,6 @@
 = Noddy AsciiDoc Document
 Tom Davies <tom.davies@nhs.net>
-v1.0 - 21/04/2018
+v1.2 - 09/03/2019
 :sectanchors:
 :sectlinks:
 :sectnums:
@@ -90,7 +90,7 @@ This is useful for defining code/output blocks:
  -rw-r--r--. 1 toda1 toda1   814 Apr 19 09:21 .bashrc
  $
 
-Or you can specify a delimited block with four repeated hyphens or periods enclosing the the block.
+Or you can specify a code block with four repeated hyphens enclosing the block.
 
 ----
 if [ "$playlist" = "Wittertainment" ]
@@ -98,6 +98,10 @@ then
   echo "Hello to Jason Isaacs"
 fi
 ----
+
+TIP: Code blocks can have additional formatting such as titles, callouts and language specific syntax highlighting. See https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code for examples.
+
+Alternatively, enclose the block with four repeated periods for a literal block.
 
 == Lists
 
