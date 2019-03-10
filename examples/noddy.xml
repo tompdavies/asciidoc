@@ -4,7 +4,7 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Noddy AsciiDoc Document</title>
-<date>2018-04-26</date>
+<date>2019-03-10</date>
 <author>
 <personname>
 <firstname>Tom</firstname>
@@ -85,11 +85,15 @@ line breaks.</simpara>
 -rw-r--r--. 1 toda1 toda1   745 Apr 17 10:29 .bash_profile
 -rw-r--r--. 1 toda1 toda1   814 Apr 19 09:21 .bashrc
 $</literallayout>
-<simpara>Or you can specify a delimited block with four repeated hyphens or periods enclosing the the block.</simpara>
+<simpara>Or you can specify a code block with four repeated hyphens enclosing the block.</simpara>
 <screen>if [ "$playlist" = "Wittertainment" ]
 then
   echo "Hello to Jason Isaacs"
 fi</screen>
+<tip>
+<simpara>Code blocks can have additional formatting such as titles, callouts and language specific syntax highlighting. See <link xl:href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code</link> for examples.</simpara>
+</tip>
+<simpara>Alternatively, enclose the block with four repeated periods for a literal block.</simpara>
 </section>
 </section>
 <section xml:id="_lists">

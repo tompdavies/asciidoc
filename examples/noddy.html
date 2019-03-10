@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.6.2">
+<meta name="generator" content="Asciidoctor 1.5.7.1">
 <meta name="author" content="Tom Davies">
 <title>Noddy AsciiDoc Document</title>
 <style>
@@ -425,7 +425,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 </head>
 <body class="article toc2 toc-left">
@@ -434,7 +434,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Tom Davies</span><br>
 <span id="email" class="email"><a href="mailto:tom.davies@nhs.net">tom.davies@nhs.net</a></span><br>
-<span id="revnumber">version 1.0 - 21/04/2018</span>
+<span id="revnumber">version 1.2 - 09/03/2019</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -615,7 +615,7 @@ $</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Or you can specify a delimited block with four repeated hyphens or periods enclosing the the block.</p>
+<p>Or you can specify a code block with four repeated hyphens enclosing the block.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -624,6 +624,21 @@ then
   echo "Hello to Jason Isaacs"
 fi</pre>
 </div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Code blocks can have additional formatting such as titles, callouts and language specific syntax highlighting. See <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code" class="bare">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code</a> for examples.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Alternatively, enclose the block with four repeated periods for a literal block.</p>
 </div>
 </div>
 </div>
@@ -814,7 +829,7 @@ For more details, see <a href="https://asciidoctor.org/docs/user-manual/#admonit
 <div class="sect1">
 <h2 id="_tables"><a class="anchor" href="#_tables"></a><a class="link" href="#_tables">7. Tables</a></h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Table of stuff</caption>
 <colgroup>
 <col style="width: 25%;">
@@ -868,8 +883,8 @@ For more details, see <a href="https://asciidoctor.org/docs/user-manual/#admonit
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0 - 21/04/2018<br>
-Last updated 2018-04-26 18:31:56 UTC
+Version 1.2 - 09/03/2019<br>
+Last updated 2019-03-10 18:32:19 STD
 </div>
 </div>
 </body>
