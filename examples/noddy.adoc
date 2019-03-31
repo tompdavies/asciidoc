@@ -11,6 +11,8 @@ v1.2 - 09/03/2019
 This document is an introduction to AsciiDoc and some of the basic
 formatting options.
 
+The source document - `noddy.adoc` - is best viewed in a plain text editor or in "Raw" mode so as to display the AsciiDoc markup.
+
 == Heading 1
 
 === Heading 2
