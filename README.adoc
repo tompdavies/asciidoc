@@ -10,7 +10,7 @@ This project is intended to provide a standardised approach to creating simple h
 
 Also, creation of DocBook (xml) files and associated output from the DocBook toolchain, such as chunked html pages.
 
-In the examples directory is `noddy.adoc` - an AsciiDoc formatted text file (best viewed in "Raw" mode or in a plain text editor) - along with generated output in html, pdf and DocBook (xml) formats.
+In the examples directory is `noddy.adoc` - an AsciiDoc formatted text file (best viewed in a plain text editor or in "Raw" mode in GitHub) - along with generated output in html, pdf and DocBook (xml) formats.
 In examples/www are a set of "chunked" html files, generated from the DocBook output.
 
 == Installation
