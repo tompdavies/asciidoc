@@ -18,7 +18,7 @@
 <title>Introduction</title>
 <simpara>This document is an introduction to AsciiDoc and some of the basic
 formatting options.</simpara>
-<simpara>The source document - <literal>noddy.adoc</literal> - is best viewed in a plain text editor or in "Raw" mode so as to display the AsciiDoc markup.</simpara>
+<simpara>The source document - <literal>noddy.adoc</literal> - is best viewed in a plain text editor or in "Raw" mode in GitHub so as to display the AsciiDoc markup.</simpara>
 </section>
 <section xml:id="_heading_1">
 <title>Heading 1</title>
