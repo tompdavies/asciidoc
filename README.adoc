@@ -69,13 +69,13 @@ For notes on the how the directory contents were created/defined/sourced, see <<
 
 === Creating HTML files
 
-Convert asciidoc to HTML5 with TOC on LHS:
+Convert asciidoc to HTML5 with table of contents / index on left-hand side:
 
- $ asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css -a toc source_file.txt
+ $ asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css -a toc2 source_file.txt
 
 NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<head>` tag +
 `toc` is an index at the top of the page +
-`toc2` is a left hand side index
+`toc2` is a left-hand side index
 
 === Creating PDF files
 
@@ -106,7 +106,7 @@ To simplify usage, create aliases in your local shell (or .bashrc) for example:
 
 To use the aliases:
 
- $ asciidoctor -a toc source_file.txt
+ $ asciidoctor -a toc2 source_file.txt
  $ asciidoctor-pdf -a toc source_file.txt
 
 Remember that aliases can be overridden with a leading backslash in order to call the executable directly, for example:
