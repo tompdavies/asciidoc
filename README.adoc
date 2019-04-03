@@ -13,6 +13,12 @@ Also, creation of DocBook (xml) files and associated output from the DocBook too
 In the examples directory is `noddy.adoc` - an AsciiDoc formatted text file (best viewed in a plain text editor or in "Raw" mode in GitHub) - along with generated output in html, pdf and DocBook (xml) formats.
 In examples/www are a set of "chunked" html files, generated from the DocBook output.
 
+Further reading on the AsciiDoc format:
+
+. https://asciidoctor.org/
+. http://asciidoc.org/
+. https://en.wikipedia.org/wiki/AsciiDoc
+
 == Installation
 
 === Installing AsciiDoc on Centos
