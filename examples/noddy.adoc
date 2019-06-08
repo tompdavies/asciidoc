@@ -4,6 +4,7 @@ v1.3 - 31/03/2019
 :sectanchors:
 :sectlinks:
 :sectnums:
+:title-page:
 :icons: font
 
 == Introduction
