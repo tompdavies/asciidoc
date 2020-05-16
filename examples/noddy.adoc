@@ -6,6 +6,8 @@ v1.3 - 31/03/2019
 :sectnums:
 :title-page:
 :icons: font
+:imagesdir: ../images
+:my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]
 
 == Introduction
 
@@ -183,6 +185,38 @@ A link to an internal "anchor", in this case a header: <<Links>>
 |drei
 
 |===
+
+== Escaping special characters
+
+There are several ways to escape text / special characters,
+ref: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text
+
+Here are some simple examples - view the raw adoc file to see how each is implemented:
+
+* Use a backslash to escape, e.g. `+\*don't bold me*+` -> \*don't bold me*
+* substitution: `+{asterisk}don't bold me{asterisk}+` -> {asterisk}don't bold me{asterisk}
+* attribute:
+** define this in the header section: `+++:my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]+++`
+** use this the body: `+{my_substitution}+`
+** results in: {my_substitution}
+* passthrough: `pass:[+*don't bold me*+]` -> +*don't bold me*+
+* raw passthrough: `pass:[+++*don't bold me*+++]` -> +++*don't bold me*+++
+* passthrough macro: `+++pass:[*don't bold me*]+++` -> pass:[*don't bold me*]
+
+== Images
+
+There are lots of options for specifying images attributes and positioning - ref https://asciidoctor.org/docs/user-manual/#images - but here are a couple of simple options:
+
+Inline:
+
+In the middle image:yoshi1.png[] of some text
+
+Block:
+
+// Alt text goes in the brackets
+image::yoshi2.png[Yoshi]
+
+NOTE: Use the "imagesdir" document attribute to define a common location for image files. If undefined, it will look for images in the current dir.
 
 <<<
 

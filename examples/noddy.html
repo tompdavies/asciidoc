@@ -462,7 +462,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_admonitions">5. Admonitions</a></li>
 <li><a href="#_links">6. Links</a></li>
 <li><a href="#_tables">7. Tables</a></li>
-<li><a href="#_appendices">8. Appendices</a>
+<li><a href="#_escaping_special_characters">8. Escaping special characters</a></li>
+<li><a href="#_images">9. Images</a></li>
+<li><a href="#_appendices">10. Appendices</a>
 <ul class="sectlevel2">
 <li><a href="#_notes_on_creating_appendices">Appendix A: Notes on creating appendices</a></li>
 </ul>
@@ -869,11 +871,92 @@ For more details, see <a href="https://asciidoctor.org/docs/user-manual/#admonit
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_escaping_special_characters"><a class="anchor" href="#_escaping_special_characters"></a><a class="link" href="#_escaping_special_characters">8. Escaping special characters</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are several ways to escape text / special characters,
+ref: <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text" class="bare">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text</a></p>
+</div>
+<div class="paragraph">
+<p>Here are some simple examples - view the raw adoc file to see how each is implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use a backslash to escape, e.g. <code>\*don't bold me*</code> &#8594; *don&#8217;t bold me*</p>
+</li>
+<li>
+<p>substitution: <code>{asterisk}don't bold me{asterisk}</code> &#8594; *don&#8217;t bold me*</p>
+</li>
+<li>
+<p>attribute:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>define this in the header section: <code>:my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]</code></p>
+</li>
+<li>
+<p>use this the body: <code>{my_substitution}</code></p>
+</li>
+<li>
+<p>results in: *don&#8217;t bold me*</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>passthrough: <code>+*don't bold me*+</code> &#8594; *don't bold me*</p>
+</li>
+<li>
+<p>raw passthrough: <code>+++*don't bold me*+++</code> &#8594; *don't bold me*</p>
+</li>
+<li>
+<p>passthrough macro: <code>pass:[*don't bold me*]</code> &#8594; *don't bold me*</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_images"><a class="anchor" href="#_images"></a><a class="link" href="#_images">9. Images</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are lots of options for specifying images attributes and positioning - ref <a href="https://asciidoctor.org/docs/user-manual/#images" class="bare">https://asciidoctor.org/docs/user-manual/#images</a> - but here are a couple of simple options:</p>
+</div>
+<div class="paragraph">
+<p>Inline:</p>
+</div>
+<div class="paragraph">
+<p>In the middle <span class="image"><img src="../images/yoshi1.png" alt="yoshi1"></span> of some text</p>
+</div>
+<div class="paragraph">
+<p>Block:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/yoshi2.png" alt="Yoshi">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Use the "imagesdir" document attribute to define a common location for image files. If undefined, it will look for images in the current dir.
+</td>
+</tr>
+</table>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_appendices"><a class="anchor" href="#_appendices"></a><a class="link" href="#_appendices">8. Appendices</a></h2>
+<h2 id="_appendices"><a class="anchor" href="#_appendices"></a><a class="link" href="#_appendices">10. Appendices</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_notes_on_creating_appendices"><a class="anchor" href="#_notes_on_creating_appendices"></a><a class="link" href="#_notes_on_creating_appendices">Appendix A: Notes on creating appendices</a></h3>
@@ -887,7 +970,7 @@ For more details, see <a href="https://asciidoctor.org/docs/user-manual/#admonit
 <div id="footer">
 <div id="footer-text">
 Version 1.3 - 31/03/2019<br>
-Last updated 2019-06-08 20:07:57 +0100
+Last updated 2020-05-16 22:31:50 +0100
 </div>
 </div>
 </body>

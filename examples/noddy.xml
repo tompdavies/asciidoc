@@ -4,7 +4,7 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Noddy AsciiDoc Document</title>
-<date>2019-06-08</date>
+<date>2020-05-16</date>
 <author>
 <personname>
 <firstname>Tom</firstname>
@@ -242,6 +242,66 @@ For more details, see <link xl:href="https://asciidoctor.org/docs/user-manual/#a
 </tbody>
 </tgroup>
 </table>
+</section>
+<section xml:id="_escaping_special_characters">
+<title>Escaping special characters</title>
+<simpara>There are several ways to escape text / special characters,
+ref: <link xl:href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text</link></simpara>
+<simpara>Here are some simple examples - view the raw adoc file to see how each is implemented:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Use a backslash to escape, e.g. <literal>\*don't bold me*</literal> &#8594; *don&#8217;t bold me*</simpara>
+</listitem>
+<listitem>
+<simpara>substitution: <literal>{asterisk}don't bold me{asterisk}</literal> &#8594; *don&#8217;t bold me*</simpara>
+</listitem>
+<listitem>
+<simpara>attribute:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>define this in the header section: <literal>:my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]</literal></simpara>
+</listitem>
+<listitem>
+<simpara>use this the body: <literal>{my_substitution}</literal></simpara>
+</listitem>
+<listitem>
+<simpara>results in: *don&#8217;t bold me*</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>passthrough: <literal>+*don't bold me*+</literal> &#8594; *don't bold me*</simpara>
+</listitem>
+<listitem>
+<simpara>raw passthrough: <literal>+++*don't bold me*+++</literal> &#8594; *don't bold me*</simpara>
+</listitem>
+<listitem>
+<simpara>passthrough macro: <literal>pass:[*don't bold me*]</literal> &#8594; *don't bold me*</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_images">
+<title>Images</title>
+<simpara>There are lots of options for specifying images attributes and positioning - ref <link xl:href="https://asciidoctor.org/docs/user-manual/#images">https://asciidoctor.org/docs/user-manual/#images</link> - but here are a couple of simple options:</simpara>
+<simpara>Inline:</simpara>
+<simpara>In the middle <inlinemediaobject>
+<imageobject>
+<imagedata fileref="../images/yoshi1.png"/>
+</imageobject>
+<textobject><phrase>yoshi1</phrase></textobject>
+</inlinemediaobject> of some text</simpara>
+<simpara>Block:</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/yoshi2.png"/>
+</imageobject>
+<textobject><phrase>Yoshi</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<note>
+<simpara>Use the "imagesdir" document attribute to define a common location for image files. If undefined, it will look for images in the current dir.</simpara>
+</note>
 <simpara><?asciidoc-pagebreak?></simpara>
 </section>
 <section xml:id="_appendices">

@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Appendices</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="Noddy AsciiDoc Document" /><link rel="up" href="index.html" title="Noddy AsciiDoc Document" /><link rel="prev" href="ar01s07.html" title="Tables" /><link rel="next" href="apa.html" title="Appendix A. Notes on creating appendices" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Appendices</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="apa.html">Next</a></td></tr></table><hr /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_appendices"></a>Appendices</h2></div></div></div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Escaping special characters</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="Noddy AsciiDoc Document" /><link rel="up" href="index.html" title="Noddy AsciiDoc Document" /><link rel="prev" href="ar01s07.html" title="Tables" /><link rel="next" href="ar01s09.html" title="Images" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Escaping special characters</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="ar01s09.html">Next</a></td></tr></table><hr /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_escaping_special_characters"></a>Escaping special characters</h2></div></div></div>
 
-
-</div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="apa.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Tables </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Appendix A. Notes on creating appendices</td></tr></table></div></body></html>
+<p>There are several ways to escape text / special characters,
+ref: <a class="ulink" href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text" target="_top">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#escaping-text</a></p>
+<p>Here are some simple examples - view the raw adoc file to see how each is implemented:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Use a backslash to escape, e.g. <code class="literal">\*don't bold me*</code> → *don’t bold me*
+</li><li class="listitem">
+substitution: <code class="literal">{asterisk}don't bold me{asterisk}</code> → *don’t bold me*
+</li><li class="listitem">
+<p class="simpara">attribute:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
+define this in the header section: <code class="literal">:my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]</code>
+</li><li class="listitem">
+use this the body: <code class="literal">{my_substitution}</code>
+</li><li class="listitem">
+results in: *don’t bold me*
+</li></ul></div>
+</li><li class="listitem">
+passthrough: <code class="literal">+*don't bold me*+</code> → *don't bold me*
+</li><li class="listitem">
+raw passthrough: <code class="literal">+++*don't bold me*+++</code> → *don't bold me*
+</li><li class="listitem">
+passthrough macro: <code class="literal">pass:[*don't bold me*]</code> → *don't bold me*
+</li></ul></div>
+</div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="ar01s09.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Tables </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Images</td></tr></table></div></body></html>
