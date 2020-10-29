@@ -51,6 +51,10 @@ Install the Ruby Gems for asciidoctor, asciidoctor-pdf and the supporting gems f
  $ gem install prawn
  $ gem install prawn-svg
  $ gem install prawn-templates
+ $ gem install asciidoctor-pdf
+
+If the install of asciidoctor-pdf does not work, then try the --pre flag:
+
  $ gem install asciidoctor-pdf --pre
 
 Check the version of asciidoctor-pdf to prove the installation:
