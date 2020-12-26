@@ -7,6 +7,7 @@ v2.0 - 16/05/2020
 :title-page:
 :icons: font
 :imagesdir: ../images
+:data-uri:
 :my_substitution: pass:normal[{asterisk}don't bold me{asterisk}]
 
 == Introduction
@@ -207,16 +208,21 @@ Here are some simple examples - view the raw adoc file to see how each is implem
 
 There are lots of options for specifying images attributes and positioning - ref https://asciidoctor.org/docs/user-manual/#images - but here are a couple of simple options:
 
-Inline:
+_Inline:_
 
-In the middle image:yoshi1.png[] of some text
+This is done with a single colon in the definition, e.g. `pass:[image:filename.png[]]`  and places the image in the middle image:yoshi1.png[] of some text.
 
-Block:
+_Block:_
 
-// Alt text goes in the brackets
+This is done with a double colon in the definition, e.g. `pass:[image::yoshi2.png[Yoshi]]` resulting in:
+
 image::yoshi2.png[Yoshi]
 
-NOTE: Use the "imagesdir" document attribute to define a common location for image files. If undefined, it will look for images in the current dir.
+In this second example, alt text for the image is placed within the brackets.
+
+NOTE: Use the `:imagesdir:` document attribute to define a common location for image files. If undefined, it will look for images in the current dir.
+
+NOTE: Using the `:data-uri:` document attribute will result in images being embedded (using base64 encoding) rather than linked when html pages are generated. NB: this doesn't appear to work downstream into the DocBook toolchain and chunked html pages.
 
 <<<
 
