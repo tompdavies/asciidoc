@@ -21,6 +21,10 @@ Further reading on the AsciiDoc format:
 
 == Installation
 
+=== Installing AsciiDoc on macOS
+
+ $ brew install asciidoctor
+
 === Installing AsciiDoc on Centos
 
  $ sudo yum install asciidoc
@@ -71,7 +75,6 @@ Create the following subfolders and contents (which can be pulled/downloaded fro
 
 * fonts
 * gen_html
-* gen_pdf
 
 For notes on the how the directory contents were created/defined/sourced, see <<Supporting Files>>.
 
@@ -91,7 +94,7 @@ NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<
 
 Convert asciidoc to pdf:
 
- $ asciidoctor-pdf -a pdf-style=/home/user/asciidoc/gen_pdf/pdf_theme_croscore.yml -a pdf-fontsdir=/home/user/asciidoc/fonts -a toc source_file.txt
+ $ asciidoctor-pdf -a toc source_file.txt
 
 === Creating DocBook files
 
@@ -112,12 +115,10 @@ NOTE: `--skip-validation` avoids errors due to deprecated stylesheets.
 To simplify usage, create aliases in your local shell (or .bashrc) for example:
 
  $ alias asciidoctor='asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css'
- $ alias asciidoctor-pdf='asciidoctor-pdf -a pdf-style=/home/user/asciidoc/gen_pdf/pdf_theme_croscore.yml -a pdf-fontsdir=/home/user/asciidoc/fonts'
 
 To use the aliases:
 
  $ asciidoctor -a toc2 source_file.txt
- $ asciidoctor-pdf -a toc source_file.txt
 
 Remember that aliases can be overridden with a leading backslash in order to call the executable directly, for example:
 
@@ -168,9 +169,7 @@ Ref:
 
 Notes:
 
-* create docinfo.html with link tags or similar for the html header
-* create a local css stylesheet, based on one of the asciidoctor default stylesheets located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-1.5.6.2/data/stylesheets/` or similar.
-* create a local pdf yaml stylesheet, based on one of the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/themes/` or similar.
-* create a fonts directory, based on the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/fonts/` or similar.
-  You can add any additional .ttf font that you want to include in pdf documents.
-
+* create a `fonts` directory, based on the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/fonts/` or similar.
+  You can add any additional `.ttf` font that you want to include in pdf documents.
+* create `gen_html/docinfo.html` with link tags or similar for the html header
+* create a local css stylesheet in the `gen_html` dir, based on one of the asciidoctor default stylesheets located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-1.5.6.2/data/stylesheets/` or similar.
