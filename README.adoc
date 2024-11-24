@@ -75,6 +75,7 @@ Create the following subfolders and contents (which can be pulled/downloaded fro
 
 * fonts
 * gen_html
+* gen_pdf
 
 For notes on the how the directory contents were created/defined/sourced, see <<Supporting Files>>.
 
