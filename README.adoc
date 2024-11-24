@@ -115,10 +115,12 @@ NOTE: `--skip-validation` avoids errors due to deprecated stylesheets.
 To simplify usage, create aliases in your local shell (or .bashrc) for example:
 
  $ alias asciidoctor='asciidoctor -b html5 -a docinfodir=/home/user/asciidoc/gen_html -a docinfo=shared -a stylesheet=/home/user/asciidoc/gen_html/css_local.css'
+ $ alias asciidoctor-pdf='asciidoctor-pdf -a pdf-theme=/home/user/asciidoc/gen_pdf/local-theme.yml'
 
 To use the aliases:
 
  $ asciidoctor -a toc2 source_file.txt
+ $ asciidoctor-pdf -a toc source_file.txt
 
 Remember that aliases can be overridden with a leading backslash in order to call the executable directly, for example:
 
