@@ -95,7 +95,7 @@ NOTE: `docinfo=shared` refers to `docinfo.html` and provides includes for the `<
 
 Convert asciidoc to pdf:
 
- $ asciidoctor-pdf -a toc source_file.txt
+ $ asciidoctor-pdf -a pdf-theme=/home/user/asciidoc/gen_pdf/local-theme.yml -a toc source_file.txt
 
 === Creating DocBook files
 
