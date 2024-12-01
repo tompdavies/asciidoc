@@ -172,7 +172,7 @@ Ref:
 
 Notes:
 
-* create a `fonts` directory, based on the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/fonts/` or similar.
-  You can add any additional `.ttf` font that you want to include in pdf documents.
+* create a `fonts` directory, based on the asciidoctor defaults located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-pdf-1.5.0.alpha.16/data/fonts/` or similar - you can add any additional `.ttf` font that you want to include in pdf documents
 * create `gen_html/docinfo.html` with link tags or similar for the html header
-* create a local css stylesheet in the `gen_html` dir, based on one of the asciidoctor default stylesheets located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-1.5.6.2/data/stylesheets/` or similar.
+* create a local css stylesheet in the `gen_html` dir, based on one of the asciidoctor default stylesheets located in `/usr/local/rvm/gems/ruby-2.4.0/gems/asciidoctor-1.5.6.2/data/stylesheets/` or similar
+* create `gen_pdf/local-theme.yml` for pdf styles/themes
