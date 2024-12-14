@@ -20,7 +20,7 @@ target_pdf=${script_dir}/../gen_pdf/local-theme.yml
 mkdir -p ~/tmp
 
 cp -p ${source_css} ${stage_css}
-sed -i 's/h1:first-child{color:rgba(0,0,0,.85)/h1:first-child{color:rgba(33,86,135,.85)/g' ${stage_css}
+sed -i 's/h1:first-child{color:rgba(0,0,0,.85)/h1:first-child{color:#21587/g' ${stage_css}
 sed -i 's/color:#7a2518/color:#215687/g' ${stage_css}
 sed -i 's/color:#ba3925/color:#215687/g' ${stage_css}
 sed -i 's/color:#a53221/color:#215687/g' ${stage_css}
